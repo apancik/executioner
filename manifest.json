@@ -1,0 +1,17 @@
+{
+	"name": "Executioner",
+	"version": "1.1",
+	"description": "Execs custom JS & CSS",
+	"permissions": ["activeTab", "storage"],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": "icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-3.4.1.min.js", "content.js"]
+		}
+	],
+	"manifest_version": 2
+}

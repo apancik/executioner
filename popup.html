@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				width: 780px;
+				height: 560px;
+			}
+
+			body {
+				margin: 0;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				text-align: left;
+				background-color: #f8f9fa;
+			}
+
+			.row {
+				padding-top: 1rem;
+			}
+
+			.container {
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.btn {
+				display: inline-block;
+				cursor: pointer;
+				font-weight: 400;
+				text-align: center;
+				vertical-align: middle;
+				user-select: none;
+				padding: 0.375rem 0.75rem;
+				font-size: 1rem;
+				line-height: 1.5;
+				border-radius: 0.25rem;
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			}
+
+			.btn-glow {
+				color: white;
+				background: #20212f;
+				box-shadow: 0 10px 20px 0 rgba(32, 33, 47, 0.2);
+			}
+
+			.btn-glow:hover {
+				color: gray;
+			}
+
+			.btn .badge {
+				position: relative;
+				top: -1px;
+			}
+
+			.badge-light {
+				color: #212529;
+				background-color: #f8f9fa;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: 0.25em 0.4em;
+				font-size: 75%;
+				font-weight: 700;
+				line-height: 1;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: baseline;
+				border-radius: 0.25rem;
+				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			}
+		</style>
+		<link rel="stylesheet" href="lib/codemirror.css" />
+		<script src="lib/codemirror.js"></script>
+		<script src="lib/mode/css.js"></script>
+		<script src="lib/mode/javascript.js"></script>
+	</head>
+	<body class="bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					<label for="js">JS</label>
+					<div class="input-group">
+						<textarea id="js" class="form-control" aria-label="With textarea"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm mb-3">
+					<label for="css">CSS</label>
+					<div class="input-group">
+						<textarea id="css" class="form-control" aria-label="With textarea" rows="8"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm">
+					<button id="button-save" type="button" class="btn btn-glow">Inject on <span id="url" class="badge badge-light"></span></button>
+				</div>
+			</div>
+		</div>
+
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>
